@@ -1,21 +1,21 @@
 /*Login.css*/
 
-* {
+/* * {
 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+  } */
   /* Account Page */
 
-  .auth-container {
+  /* .auth-container {
     padding: 100px;
  
 
     height:610px;
     background: radial-gradient(#fff, #dff9fb);
-  }
-  .form-container {
+  } */
+  /* .form-container {
     background: #fff;
     width: 320px;
     height: 350px;
@@ -53,15 +53,15 @@
   }
   
   #LoginForm {
-    left: 0;
+    left: 0; */
   }
-  #RegForm {
+  /* #RegForm {
     left: 0;
   }
   
   form a {
     font-size: 12px;
-  }
+  } */
   /* #indicator {
     width: 100px;
     border: none;
