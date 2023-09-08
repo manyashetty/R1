@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Castoro+Titling&family=Courgette&family=Dancing+Script:wght@700&family=Edu+SA+Beginner:wght@500&family=Fasthand&family=Lugrasimo&family=Oswald&family=Pacifico&family=Permanent+Marker&family=Press+Start+2P&display=swap');
+.mealhead{
+    color: black;
+    font-size:xx-large;
+    font-weight: bold;
+    font-family: 'Lugrasimo';
+    text-align: center;
+    margin-top: 50px;
+}
+.mealpara{
+    text-align: center;
+    font-family: 'Lugrasimo';
+}
+.cara{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+#textmeal{
+    color: black;
+}
+.anc{
+    color: black;
+}

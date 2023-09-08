@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Castoro+Titling&family=Courgette&family=Dancing+Script:wght@700&family=Edu+SA+Beginner:wght@500&family=Fasthand&family=Lugrasimo&family=Oswald&family=Pacifico&family=Permanent+Marker&family=Press+Start+2P&display=swap');
+.h_full{
+    /* background-color:#596275; */
+    background-color:#596275;
+    
+}
+.head{
+    font-family: 'Lugrasimo', cursive;
+    text-align: justify;
+    font-size: 100%;
+    font-weight: bolder;
+}
+.container {
+    text-align: center; 
+    padding: 20px; 
+
+}
+.card{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #2e2422a1; 
+    font-size: 36px; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+p {
+    color: #333; 
+    font-size: 18px; 
+    margin-bottom: 20px; 
+  }
+
+.non-head{
+    font-family: 'Oswald', sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+
+}
+
+#price{
+    background-color: #fefefe;
+}
+.d-block{
+
+    width:1530px;
+    height: 640px;
+}
+
+.tileBox p{
+    background-color:#ffffff;
+font-size: 15px;
+padding: 20px;
+margin: 0px;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    border-radius: 0;
+    top: 0px;
+
+}
+#container {
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  #aboutUs .txtHead{
+    background:#596275;
+    padding:20px 10px;
+  }
+#aboutUs .txtHead .fa {
+    font-size: 58px;
+    /* color: #5E5E5E; */
+    }
+#footer{
+     background-color: #596275;
+     height: 50px;
+            
+  }
+ ul.menu li {
+      display: inline-block;
+    }
+ul.actions li {
+     display: inline-block;
+    margin: 0 0 0 0.5em;
+  }
+ul.actions li:first-child {
+   margin-left: 0;
+   }
+.li.actions{
+    color: #333;
+}
+#footer .menu {
+   position: absolute;
+    right: 2em;
+    height:auto;
+    line-height: inherit;
+   margin: 0;
+   font-size: 1em;
+}
+#footer .menu li {
+  font-size: 1em;
+                }
+ .recipe-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.recipe-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ingredients {
+    margin-bottom: 10px;
+}
+
+.steps {
+    margin-bottom: 10px;
+}
+
+.box-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-icons i {
+    font-size: 30px;
+    cursor: pointer;
+} 
+.team{
+    color: black;
+    text-align: center;
+    margin-top: 25px;
+}
+#text{
+    color: #000000;
+}
+.btn{
+    margin-right: 10px;
+}
