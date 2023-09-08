@@ -13,3 +13,4 @@ const isValidBody = function(requestBody){
     return Object.keys(requestBody).length >0;
 };
 module.exports = {isValid , isValidBody};
+// export const UserModel = mongoose.model("users", UserSchema);

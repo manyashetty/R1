@@ -11,7 +11,7 @@ router.post("/register", async (req, res) => {
   if (user) {
     return res.status(400).json({ message: "Username already exists" });
   }
-  const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await bcrypt.hash(password, 10);
   const newUser = new UserModel({ username, password: hashedPassword });
   await newUser.save();
   res.json({ message: "User registered successfully" });
@@ -46,7 +46,7 @@ router.post("/login", async (req, res) => {
   return res.status(500).json({ message: "Error during login." });
 };
 });
-export { router as userRouter };
+export { router as userRouter};
 
 export const verifyToken = (req, res, next) => {
   const authHeader = req.headers.authorization;
