@@ -40,7 +40,7 @@ const SavedRecipes = () => {
       await axios.put(`http://localhost:3001/recipes/update/${editedItem.name}`, editedItem);
       // Update the state to reflect the changes
       const updatedItems = foodItems.map((item) =>
-        item.food === editedItem.food ? editedItem : item
+        item.name === editedItem.name ? editedItem : item
       );
       setFoodItems(updatedItems);
       // Close the edit modal
@@ -52,19 +52,22 @@ const SavedRecipes = () => {
   };
 
   useEffect(() => {
-    const fetchNonvegItems = async () => {
+    const fetchItems = async () => {
       try {
         const response = await axios.get('http://localhost:3001/recipes/get');
-        const nonvegItems = response.data;
-        setFoodItems(nonvegItems);
-        setCollapseStates(new Array(nonvegItems.length).fill(false));
+        const Items = response.data;
+        setFoodItems(Items);
+        setCollapseStates(new Array(Items.length).fill(false));
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
 
-    fetchNonvegItems();
+    fetchItems();
   }, []);
+
+
+
 
   return (
     <div>
@@ -74,7 +77,7 @@ const SavedRecipes = () => {
             <Col key={index} sm={12} md={6} lg={4} className='mb-4'>
               <Container>
                 <Card>
-                  <Card.Img variant="top" src={item.imageUrl} />
+                  <Card.Img variant="top "src={item.imageUrl}   alt="here"/>
                   <Card.Body>
                     <Card.Title>{item.name}</Card.Title>
                     <Button

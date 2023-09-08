@@ -2,6 +2,7 @@ import './MealPlan.css'
 import { Carousel } from 'react-bootstrap';
 const MealPlan = () => {
     return (
+        <>
         <div className='bg-meal'>
             <div className="meal">
                 <h1 className="mealhead mb-4">Meal Plans</h1>
@@ -75,6 +76,7 @@ const MealPlan = () => {
                 </Carousel>
             </div>
         </div>
+        </>
     );
 }
 

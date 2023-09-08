@@ -5,9 +5,8 @@ import { Nav,Navbar, Dropdown} from 'react-bootstrap';
 // import { Link } from 'react-router-dom'
 const Navbar1 = () => {
     return (
-    <Navbar className="shadow">
-        {/* <Navbar.Toggle aria-controls="navbarNav" /> */}
-            <Navbar.Collapse id="navbarNav">
+
+        
         <div className='h_full'>
             <div className="container-fluid">
                 <nav className="navbar navbar-expand-lg back">
@@ -29,7 +28,7 @@ const Navbar1 = () => {
                             
                             <Dropdown as={Nav.Item}>
                 <Dropdown.Toggle as={Nav.Link} id="recipes-dropdown" className="nav-link">
-                 More Options
+                 More
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
                   <Dropdown.Item href='/create-recipe' to="/create-recipe">Create-Recipe</Dropdown.Item>
@@ -53,9 +52,8 @@ const Navbar1 = () => {
             </div> */}
         </div>
        
-            </Navbar.Collapse>
-      
-    </Navbar>
+           
+
     
     );
 }

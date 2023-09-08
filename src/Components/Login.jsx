@@ -87,7 +87,7 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import "../Components/Login.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Pic1 from "../Images/one (1).jpg";
 
  const Login = () => {
   const [_, setCookies] = useCookies(["access_token"]);
@@ -108,6 +108,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
       setCookies("access_token", result.data.token);
       window.localStorage.setItem("userID", result.data.userID);
+      alert("Login successful.");
       navigate("/");
     } catch (error) {
       console.error(error);
@@ -118,9 +119,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
     <div className="auth-container">
       <form onSubmit={handleSubmit}>
         
-        <div className="form-container">
-        <h2>Login</h2>
-          <label htmlFor="username">Username:</label>
+      <div className="account-page">
+        <div className="container text-center">
+          <div className="row">
+            <div className="col">
+            <img 
+            src={Pic1} 
+            alt="Image Alt Text" 
+            style={{ maxWidth: '100%', maxHeight: '60vh' }}/>
+            </div>
+            <div className="col-4"> 
+              <div className="form-container">
+                <div className="form-btn">
+        <h2 id="one">Login</h2>
+        </div>
+          <label htmlFor="username" id="one">Username:</label>
           <input
             type="text"
             id="username"
@@ -128,18 +141,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
             onChange={(event) => setUsername(event.target.value)}
           />
        
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password" id="one">Password:</label>
           <input
             type="password"
             id="password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />
-           <button type="submit" className="btn btn-dark ms-auto px-3 rounded-pill" >Login</button>
+           <button type="submit" className="btn btn-dark ms-auto px-3 rounded-pill" id="two" >Login</button>
         </div>
        
-      </form>
-    </div>
+      
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
   );
 };
 
