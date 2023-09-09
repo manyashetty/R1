@@ -35,31 +35,31 @@ app.use("/recipes", recipesRouter);
 
 
 // Add a new route to search for items by name and veg status
-// app.get('/create/search', async (req, res) => {
-//   try {
-//     const { keyword, isVeg } = req.query;
+app.get('/search:keyword', async (req, res) => {
+  try {
+    const { keyword, isVeg } = req.query;
 
-//     // Log the values for debugging
-//     // Define a filter object based on the query parameters
-//     const filter = {
-//       $or: [
-//         { food: { $regex: new RegExp(keyword, 'i') } },
-//         { recipe: { $regex: new RegExp(keyword, 'i') } },
-//       ],
-//     };
+    // Log the values for debugging
+    // Define a filter object based on the query parameters
+    const filter = {
+      $or: [
+        { name: { $regex: new RegExp(keyword, 'i') } },
+        { instruction: { $regex: new RegExp(keyword, 'i') } },
+      ],
+    };
 
-//     if (isVeg !== undefined) {
-//       filter.isVeg = isVeg === 'true'; // Convert the string to a boolean
-//     }
+    if (isVeg !== undefined) {
+      filter.isVeg = isVeg === 'true'; // Convert the string to a boolean
+    }
 
-//     const searchResults = await Food.find(filter);
+    const searchResults = await  RecipesModel.find(filter);
 
-//     res.json(searchResults);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ error: 'Internal server error' });
-//   }
-// });
+    res.json(searchResults);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 //for updating
 app.put('/update/:name', async (req, res) => {

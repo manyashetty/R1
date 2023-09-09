@@ -13,7 +13,7 @@ const MealPlan = () => {
                             <a href='/' className='anc'><h5>WEIGHT-LOSS MEAL PLANS</h5></a>
                         </div>
                         <div className="col-lg-3">
-                            <a href='/' className='anc'><h5>MEAL PLANS FOR DIABETES</h5></a>
+                            <a href='/diabetes' className='anc'><h5>MEAL PLANS FOR DIABETES</h5></a>
                         </div>
                         <div className="col-lg-3">
                             <a href='/' className='anc'><h5>VEGETARIAN MEAL PLANS</h5></a>

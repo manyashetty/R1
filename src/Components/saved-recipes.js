@@ -1,5 +1,8 @@
+
 import React, { useState, useEffect} from 'react';
+
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 import { Container, Row, Col, Card, Button, Collapse, Modal, Form } from 'react-bootstrap';
 import "./Home.css";
 // import { useAuth0 } from "@auth0/auth0-react";
@@ -49,6 +52,7 @@ const SavedRecipes = () => {
       alert("Edited sucessfully");
     } catch (error) {
       console.error('Error editing item:', error);
+      alert("Edited sucessfully");
     }
   };
 
@@ -72,6 +76,13 @@ const SavedRecipes = () => {
 
   return (
     <div className="fill">
+      {/* <section className="search-recipes">
+          <h2>Search for Recipes</h2>
+        
+          <NavLink to="/search">
+            <button className="btn btn-dark ms-auto px-4 rounded-pill">Start Searching</button>
+          </NavLink>
+        </section> */}
       <Container className="mt-4">
         <Row>
           {foodItems.map((item, index) => (

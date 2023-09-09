@@ -25,3 +25,23 @@
     background: radial-gradient(#fff, #c7c7c7);
   padding: 1px;
 }
+.WL{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+    width: 80%;
+    height:400px;
+}
+.wl-head{
+    text-align: center;
+    font-family: 'Lugrasimo';
+    color: black;
+    font-size:xx-large;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.c-h{
+    text-align: center;
+    font-family: 'Oswald';
+    color: black;
+}
