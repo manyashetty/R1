@@ -19,7 +19,7 @@ const SignUp = () => {
         password,
       });
       alert("Registration Completed! Now login.");
-      navigate("/");
+      navigate("/login");
     } catch (error) {
       console.error(error);
     }

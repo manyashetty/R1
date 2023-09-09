@@ -35,7 +35,7 @@ app.use("/recipes", recipesRouter);
 
 
 // Add a new route to search for items by name and veg status
-// app.get('/api/food/search', async (req, res) => {
+// app.get('/create/search', async (req, res) => {
 //   try {
 //     const { keyword, isVeg } = req.query;
 
