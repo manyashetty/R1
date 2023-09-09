@@ -13,54 +13,6 @@ app.use(cors());
 app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
 
-//for veg and nonveg separate pages
-// app.get('/create/veg', async (req, res) => {
-//   try {
-//     const vegFoods = await RecipesModel.find({ isVeg: true }); // Fetch all "veg" items from the database
-//     res.json(vegFoods);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ error: 'Internal server error' });
-//   }
-// });
-// app.get('/create/nonveg', async (req, res) => {
-//   try {
-//     const nonVegFoods = await RecipesModel.find({ isVeg: false }); // Fetch all "non-veg" items from the database
-//     res.json(nonVegFoods);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ error: 'Internal server error' });
-//   }
-// });
-
-
-// Add a new route to search for items by name and veg status
-app.get('/search:keyword', async (req, res) => {
-  try {
-    const { keyword, isVeg } = req.query;
-
-    // Log the values for debugging
-    // Define a filter object based on the query parameters
-    const filter = {
-      $or: [
-        { name: { $regex: new RegExp(keyword, 'i') } },
-        { instruction: { $regex: new RegExp(keyword, 'i') } },
-      ],
-    };
-
-    if (isVeg !== undefined) {
-      filter.isVeg = isVeg === 'true'; // Convert the string to a boolean
-    }
-
-    const searchResults = await  RecipesModel.find(filter);
-
-    res.json(searchResults);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
 //for updating
 app.put('/update/:name', async (req, res) => {
   try {

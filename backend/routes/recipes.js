@@ -1,8 +1,7 @@
 import express from "express";
-// import mongoose from "mongoose";
+
 import { RecipesModel } from "../models/Recipes.js";
-// import { UserModel } from "../models/Users.js";
-// import { verifyToken } from "./user.js";
+
 
 const router = express.Router();
 
@@ -45,30 +44,6 @@ router.get("/get", async (req, res) => {
     res.status(500).json({error:"Internal server failed"});
   }
 });
-
-
-
-// Get saved recipes
-// router.get("/savedRecipes/:userId", async (req, res) => {
-//   try {
-//     const user = await UserModel.findById(req.params.userId);
-//     const savedRecipes = await RecipesModel.find({
-//       _id: { $in: user.savedRecipes },
-//     });
-
-//     console.log(savedRecipes);
-//     res.status(201).json({ savedRecipes });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
-
-
-
-
-
-
 
 
 
