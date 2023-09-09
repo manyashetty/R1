@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 import { Container, Row, Col, Card, Button, Collapse, Modal, Form } from 'react-bootstrap';
-// import './Veg.css';
+import "./Home.css";
 // import { useAuth0 } from "@auth0/auth0-react";
 
 const SavedRecipes = () => {
@@ -44,8 +44,9 @@ const SavedRecipes = () => {
       );
       setFoodItems(updatedItems);
       // Close the edit modal
-      setShowEditModal(false);
+      setShowEditModal(true);
       setEditItem(null);
+      alert("Edited sucessfully");
     } catch (error) {
       console.error('Error editing item:', error);
     }
@@ -70,7 +71,7 @@ const SavedRecipes = () => {
 
 
   return (
-    <div>
+    <div className="fill">
       <Container className="mt-4">
         <Row>
           {foodItems.map((item, index) => (

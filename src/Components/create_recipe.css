@@ -1,4 +1,6 @@
-
+#fill{
+  background: radial-gradient(#fff, #c7c7c7);
+}
 .create-recipe {
     max-width: 600px;
     margin: 0 auto;

@@ -68,6 +68,7 @@ import "./create_recipe.css";
   };
 
   return (
+    <div id="fill">
     <div className="create-recipe">
       <h2 >Create Recipe</h2>
       <form onSubmit={handleSubmit}>
@@ -153,6 +154,7 @@ import "./create_recipe.css";
         />
         <button type="submit">Create Recipe</button>
       </form>
+    </div>
     </div>
   );
 };

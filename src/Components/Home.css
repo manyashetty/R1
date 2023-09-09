@@ -148,3 +148,7 @@ ul.actions li:first-child {
 .btn{
     margin-right: 10px;
 }
+.fill{
+    background: radial-gradient(#fff, #c7c7c7);
+    padding: 1px;
+}
